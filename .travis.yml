@@ -7,3 +7,6 @@ php:
 
 before_script:
   - make install
+
+script:
+  - make qa
