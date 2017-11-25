@@ -3,13 +3,11 @@
 
 require __DIR__ . '/../vendor/autoload.php';
 
-use Command\DefaultCommand;
+use Command\SendNowCommand;
 use Symfony\Component\Console\Application;
 
 $application = new Application('sms-sender-api');
-$command = new DefaultCommand();
 
-$application->add($command);
+$application->add(new SendNowCommand());
 
-$application->setDefaultCommand($command->getName(), true);
 $application->run();

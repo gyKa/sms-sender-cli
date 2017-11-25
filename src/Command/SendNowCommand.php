@@ -7,12 +7,12 @@ use Symfony\Component\Console\Input\InputArgument;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
 
-class DefaultCommand extends Command
+class SendNowCommand extends Command
 {
     protected function configure()
     {
         $this
-            ->setName('sms:send')
+            ->setName('send:now')
             ->addArgument('number', InputArgument::REQUIRED)
             ->addArgument('text', InputArgument::REQUIRED)
         ;
