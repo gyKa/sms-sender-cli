@@ -23,6 +23,10 @@ class DefaultCommand extends Command
      */
     protected function execute(InputInterface $input, OutputInterface $output)
     {
-        //
+        $port = '/dev/ttyACM0';
+        $resource = fopen($port, 'w');
+        $text = sprintf("%s|%s\n", $input->getArgument('number'), $input->getArgument('text'));
+        fwrite($resource, $text);
+        fclose($resource);
     }
 }
