@@ -1,4 +1,7 @@
 install:
+	composer install --no-dev --no-interaction
+
+install-dev:
 	composer install --no-interaction
 
 qa: parallel-lint phpcs phpmd phpcpd
